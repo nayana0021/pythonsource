@@ -44,3 +44,41 @@ for i in range(10):
 
 for i in range(1,101):
     print(i, end=" ")
+
+print()
+
+# 사용자로부터 숫자 입력 받기 / 1~입력한 숫자까지 합계 구한 후 출력
+# num = int(input("숫자 입력 : "))
+# hap = 0
+# for i in range(1,num+1):
+#     hap += i
+# print("1 ~ {} 합계 : {}".format(num,hap))
+
+# sum() : 
+print("sum 함수")
+print(sum(range(1,11)))
+
+for i in range(10, -1, -1):
+    print(i, end=' ')
+
+print()
+
+for i in range(5):
+    for j in range(5):
+        print(i+j, end=" ")
+    print()
+
+# 구구단 : 2 ~ 9 단 출력
+# 2 * 1 = 2     2 * 2 = 4
+for i in range(2,10):
+    for j in range(1,10):
+        print("{} * {} = {}".format(i,j, i*j), end="\t")
+    print()
+
+# break, continue : 자바 개념과 동일
+i = 1
+while i <= 10:
+    if i ==5:
+        break
+    print(i, end=" ")
+    i += 1
