@@ -104,13 +104,13 @@ result = 0
 if opt == "+":
     result = num1 + num2
 elif opt == "-":
-    result = num1 + num2
+    result = num1 - num2
 elif opt == "*":
-    result = num1 + num2
+    result = num1 * num2
 elif opt == "/":
-    result = num1 + num2
+    result = num1 / num2
 elif opt == "//":
-    result = num1 + num2
+    result = num1 // num2
 elif opt == "%":
     result = num1 % num2
 elif opt == "**":
