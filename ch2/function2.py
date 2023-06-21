@@ -49,3 +49,48 @@ def even2(n):
 print(list(filter(even2, list1)))   # [2, 6, 8, 10, 12]
 
 print(list(filter(lambda n: n % 2 == 0, list1)))
+
+# lambda map
+
+def mul(x):
+    return x**2
+
+nums = [1,2,3,6,8,10,11,12,13,14,15]
+
+# map(함수, 리스트)
+print(list(map(mul, nums)))     # [1, 4, 9, 36, 64, 100, 121, 144, 169, 196, 225]
+
+print(list(map(lambda x: x**2, nums)))  # 바로 정의해서 사용이 가능하다 - 람다 맵 함수랑 주로 쓰임
+
+nums = list(range(1,11))    # 1~10 리스트 생성
+
+# 3의 배수만 문자열로 변경한 리스트 반환 ==> str(3) ==> '3'
+# [1, 2,'3', 4, 5, '6', 7..]
+
+# 새로운 결과를 담을 빈 리스트 생성
+nums_result = []
+
+def str_check(nums):
+    '''
+    리스트 안의 요소가 3의 배수인 경우 문자로 변환
+    '''
+    for i in nums:
+        if i % 3 == 0:
+            nums_result.append(str(i))
+        else:
+            nums_result.append(i)
+
+    return nums_result
+
+print(str_check(nums))  # [1, 2, '3', 4, 5, '6', 7, 8, '9', 10]
+
+# filter, map
+def str_check2(i):  # map 에 대한 함수는 요소 하나에 대한 함수를 정의한다고 보면 됨
+    if i % 3 == 0:
+        return str(i)
+    else:
+        return i
+
+print(list(map(str_check2, nums)))  # [1, 2, '3', 4, 5, '6', 7, 8, '9', 10]
+
+print(list(map(lambda i:str(i) if i % 3 == 0 else i, nums))) 
