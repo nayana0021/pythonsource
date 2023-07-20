@@ -203,8 +203,12 @@ pip-selfcheck.json
 # Ignore all local history of files
 .history
 .ionide
+#data 파일 빼기(용량 큼)
+*/data
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,venv,python
 
 #DS파일
 .DS_Store
+
+
